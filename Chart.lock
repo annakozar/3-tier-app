@@ -1,0 +1,12 @@
+dependencies:
+- name: deployment
+  repository: https://devops-nirvana.s3.amazonaws.com/helm-charts/
+  version: 1.0.37
+- name: deployment
+  repository: https://devops-nirvana.s3.amazonaws.com/helm-charts/
+  version: 1.0.37
+- name: statefulset
+  repository: https://devops-nirvana.s3.amazonaws.com/helm-charts/
+  version: 1.0.37
+digest: sha256:6c5553483461eb0756737111b2f8e3b067f0c497ef01e755a99a98e1a39a5375
+generated: "2024-01-31T19:49:35.088998814+01:00"

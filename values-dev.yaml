@@ -1,0 +1,13 @@
+frontend:
+  ingress:
+    hosts:
+    - host: 3-tier-app-dev.com
+      paths:
+        - /
+  resources:
+    limits:
+      cpu: 100m
+      memory: 64Mi
+    requests:
+      cpu: 50m
+      memory: 32Mi

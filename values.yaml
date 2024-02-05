@@ -1,0 +1,35 @@
+frontend:
+  autoscaling:
+    enabled: true
+  name: frontend
+  image:
+    repository: frontend
+  ingress:
+    enabled: true
+    ingressClassName: nginx
+    hosts:
+    - host: 3-tier-app-test.com
+      paths:
+        - /
+  tolerations: 
+    - key: "clientA"
+      operator: "Equal"
+      value: "ClientA"
+      effect: "NoSchedule"
+backend:
+  autoscaling:
+    enabled: true
+  name: backend
+  image:
+    repository: backend
+database:
+  name: database
+  image:
+    repository: database
+  persistence:
+    enabled: true
+  tolerations: 
+    - key: "clientA"
+      operator: "Equal"
+      value: "ClientA"
+      effect: "NoSchedule"
